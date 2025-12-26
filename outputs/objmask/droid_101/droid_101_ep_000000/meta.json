@@ -1,0 +1,23 @@
+{
+  "episode_id": "droid_101_ep_000000",
+  "instruction": "Pick up the blue ring from the table and put it in the wooden tray",
+  "objects": [
+    "the blue ring",
+    "the table",
+    "the wooden tray"
+  ],
+  "cameras": {
+    "exterior_image_1_left": {
+      "original_video": "exterior_image_1_left/original.mp4",
+      "masked_video": "exterior_image_1_left/objmask.mp4"
+    },
+    "exterior_image_2_left": {
+      "original_video": "exterior_image_2_left/original.mp4",
+      "masked_video": "exterior_image_2_left/objmask.mp4"
+    },
+    "wrist_image_left": {
+      "original_video": "wrist_image_left/original.mp4",
+      "masked_video": "wrist_image_left/objmask.mp4"
+    }
+  }
+}
