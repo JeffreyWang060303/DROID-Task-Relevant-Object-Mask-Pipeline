@@ -55,6 +55,7 @@ Activate the shared **`sam3`** conda environment:
 ```bash
 source /vision/u/yinhang/miniconda3/etc/profile.d/conda.sh
 conda activate sam3
+'''
 
 Required Dependencies
 
