@@ -1,0 +1,23 @@
+{
+  "episode_id": "droid_101_ep_000002",
+  "instruction": "Pick up the lid and put it on top of the black pot",
+  "objects": [
+    "the lid",
+    "top",
+    "the black pot"
+  ],
+  "cameras": {
+    "exterior_image_1_left": {
+      "original_video": "exterior_image_1_left/original.mp4",
+      "masked_video": "exterior_image_1_left/objmask.mp4"
+    },
+    "exterior_image_2_left": {
+      "original_video": "exterior_image_2_left/original.mp4",
+      "masked_video": "exterior_image_2_left/objmask.mp4"
+    },
+    "wrist_image_left": {
+      "original_video": "wrist_image_left/original.mp4",
+      "masked_video": "wrist_image_left/objmask.mp4"
+    }
+  }
+}

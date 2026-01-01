@@ -98,7 +98,7 @@ def extract_instruction(ep):
 
 def process_episode(ep, global_idx, processor):
     ep_id = episode_id(global_idx)
-    out_dir = OUT_ROOT / DATASET_NAME / ep_id
+    out_dir = OUT_ROOT / DATASET_NAME / f"E{ep_id}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     instruction = extract_instruction(ep)
@@ -121,7 +121,6 @@ def process_episode(ep, global_idx, processor):
         "cameras": {},
     }
 
-    # ---- Lazy writer creation ----
     def get_writers(cam, h, w):
         if cam not in writers_mask:
             cam_dir = out_dir / cam
