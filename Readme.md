@@ -83,6 +83,7 @@ Outputs are written under the configured output root (e.g. outputs/).
 
 For N experiments, the directory structure is:
 
+```bash
 outputs/
 └── dataset_name/
     ├── E1/
@@ -100,8 +101,9 @@ outputs/
     ├── E3/
     ├── E4/
     └── E5/
+````
 
-** meta.json (Per Experiment) **
+## ** meta.json (Per Experiment) **
 
 Each experiment folder contains a metadata file with the following content:
 
