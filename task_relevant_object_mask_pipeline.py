@@ -93,7 +93,7 @@ def episode_id(idx):
 
 def extract_instruction(ep):
     for step in ep["steps"]:
-        return step["language_instruction"].numpy().decode("utf-8")
+        return step["language_instruction_3"].numpy().decode("utf-8")
     return ""
 
 def process_episode(ep, global_idx, processor):

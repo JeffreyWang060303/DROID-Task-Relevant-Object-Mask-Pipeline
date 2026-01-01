@@ -55,7 +55,11 @@ Activate the shared **`sam3`** conda environment:
 ```bash
 source /vision/u/yinhang/miniconda3/etc/profile.d/conda.sh
 conda activate sam3
+<<<<<<< HEAD
 '''
+=======
+````
+>>>>>>> 4243ed9 (readme, instruction3)
 
 Required Dependencies
 
@@ -75,3 +79,7 @@ If the spaCy language model is missing, install it with:
 
 ```bash
 python -m spacy download en_core_web_sm
+<<<<<<< HEAD
+=======
+````
+>>>>>>> 4243ed9 (readme, instruction3)

@@ -1,10 +1,9 @@
 {
   "episode_id": "droid_101_ep_000000",
-  "instruction": "Pick up the blue ring from the table and put it in the wooden tray",
+  "instruction": "Put the blue ring in the box",
   "objects": [
     "the blue ring",
-    "the table",
-    "the wooden tray"
+    "the box"
   ],
   "cameras": {
     "exterior_image_1_left": {
