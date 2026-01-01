@@ -107,6 +107,7 @@ outputs/
 
 Each experiment folder contains a metadata file with the following content:
 
+```bash
 instruction:
 "Pick up the blue ring from the table and put it in the wooden tray"
 
@@ -114,3 +115,4 @@ objects:
 - blue ring
 - table
 - wooden tray
+````
