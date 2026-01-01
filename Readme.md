@@ -18,9 +18,6 @@ Given one episode from the DROID RLDS dataset, automatically:
 3. Segment those objects in RGB videos using **SAM3**
 4. Save both **original** and **masked** videos for each camera view
 
-This pipeline is designed to scale safely on the Stanford **viscam** cluster using **Slurm**.
-
-
 ## **Models Used**
 
 ### **Segmentation**
