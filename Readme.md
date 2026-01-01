@@ -103,7 +103,7 @@ outputs/
     └── E5/
 ````
 
-## ** meta.json (Per Experiment) **
+## **meta.json (Per Experiment)**
 
 Each experiment folder contains a metadata file with the following content:
 
