@@ -53,7 +53,7 @@ Given one episode from the DROID RLDS dataset, automatically:
 Activate the shared **`sam3`** conda environment:
 
 ```bash
-source /vision/u/yinhang/miniconda3/etc/profile.d/conda.sh
+source /sailhome/jeffreywang0303/miniconda3/etc/profile.d/conda.sh
 conda activate sam3
 ````
 
