@@ -1,0 +1,14 @@
+{
+  "episode_id": "droid_101_ep_000008",
+  "instruction": "Pick up the red pepper on the plate and put it on the table",
+  "objects": [
+    "the red pepper",
+    "the plate",
+    "the table"
+  ],
+  "cameras": {
+    "exterior_image_1_left": "exterior_image_1_left/video.mp4",
+    "exterior_image_2_left": "exterior_image_2_left/video.mp4",
+    "wrist_image_left": "wrist_image_left/video.mp4"
+  }
+}

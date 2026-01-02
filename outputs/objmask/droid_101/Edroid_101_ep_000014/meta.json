@@ -1,0 +1,14 @@
+{
+  "episode_id": "droid_101_ep_000014",
+  "instruction": "Remove the clear ring from the box and place it on the table.",
+  "objects": [
+    "the clear ring",
+    "the box",
+    "the table"
+  ],
+  "cameras": {
+    "exterior_image_1_left": "exterior_image_1_left/video.mp4",
+    "exterior_image_2_left": "exterior_image_2_left/video.mp4",
+    "wrist_image_left": "wrist_image_left/video.mp4"
+  }
+}

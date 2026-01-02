@@ -94,7 +94,7 @@ def episode_id(idx):
 
 def extract_instruction(ep):
     for step in ep["steps"]:
-        return step["language_instruction_3"].numpy().decode("utf-8")
+        return step["language_instruction"].numpy().decode("utf-8")
     return ""
 
 def process_episode(ep, global_idx, processor):
@@ -112,8 +112,7 @@ def process_episode(ep, global_idx, processor):
     print("Objects:", objects)
     print("==============================\n")
 
-    writers_mask = {}
-    writers_orig = {}
+    writers = {}
 
     meta = {
         "episode_id": ep_id,
@@ -122,34 +121,24 @@ def process_episode(ep, global_idx, processor):
         "cameras": {},
     }
 
-    def get_writers(cam, h, w):
-        if cam not in writers_mask:
+    def get_writer(cam, h, w):
+        if cam not in writers:
             cam_dir = out_dir / cam
             cam_dir.mkdir(exist_ok=True)
 
-            orig_path = cam_dir / "original.mp4"
-            mask_path = cam_dir / "objmask.mp4"
+            out_path = cam_dir / "video.mp4"
 
-            writers_orig[cam] = cv2.VideoWriter(
-                str(orig_path),
+            writers[cam] = cv2.VideoWriter(
+                str(out_path),
                 cv2.VideoWriter_fourcc(*"mp4v"),
                 FPS,
-                (w, h),
+                (w * 2, h),  # width doubled for side-by-side
             )
 
-            writers_mask[cam] = cv2.VideoWriter(
-                str(mask_path),
-                cv2.VideoWriter_fourcc(*"mp4v"),
-                FPS,
-                (w, h),
-            )
+            meta["cameras"][cam] = str(out_path.relative_to(out_dir))
 
-            meta["cameras"][cam] = {
-                "original_video": str(orig_path.relative_to(out_dir)),
-                "masked_video": str(mask_path.relative_to(out_dir)),
-            }
+        return writers[cam]
 
-        return writers_orig[cam], writers_mask[cam]
 
     # ---- Main loop (streaming, no frame buffering) ----
     for step in ep["steps"]:
@@ -177,19 +166,19 @@ def process_episode(ep, global_idx, processor):
             out_np = np.array(out_img.convert("RGB"))
             h, w = out_np.shape[:2]
 
-            orig_writer, mask_writer = get_writers(cam, h, w)
+            orig_np = frame  # (H, W, 3), uint8
+            masked_np = np.array(out_img.convert("RGB"))
 
-            # write original frame
-            orig_writer.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
+            assert orig_np.shape == masked_np.shape
 
-            # write masked frame
-            mask_writer.write(cv2.cvtColor(out_np, cv2.COLOR_RGB2BGR))
+            concat_np = np.concatenate([orig_np, masked_np], axis=1)
+
+            writer = get_writer(cam, h, w)
+            writer.write(cv2.cvtColor(concat_np, cv2.COLOR_RGB2BGR))
+
 
     # ---- Release writers ----
-    for w in writers_orig.values():
-        w.release()
-
-    for w in writers_mask.values():
+    for w in writers.values():
         w.release()
 
     # ---- Save metadata ----

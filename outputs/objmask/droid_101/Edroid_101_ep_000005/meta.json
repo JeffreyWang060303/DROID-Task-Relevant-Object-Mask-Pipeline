@@ -1,0 +1,16 @@
+{
+  "episode_id": "droid_101_ep_000005",
+  "instruction": "Move the pan forward and use the brush in the middle of the plates to brush the inside of the pan",
+  "objects": [
+    "the pan",
+    "the brush",
+    "the middle",
+    "the plates",
+    "the inside"
+  ],
+  "cameras": {
+    "exterior_image_1_left": "exterior_image_1_left/video.mp4",
+    "exterior_image_2_left": "exterior_image_2_left/video.mp4",
+    "wrist_image_left": "wrist_image_left/video.mp4"
+  }
+}

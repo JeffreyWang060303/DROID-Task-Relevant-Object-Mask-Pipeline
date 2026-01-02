@@ -1,0 +1,13 @@
+{
+  "episode_id": "droid_101_ep_000017",
+  "instruction": "Put the glue stick in the cup",
+  "objects": [
+    "the glue stick",
+    "the cup"
+  ],
+  "cameras": {
+    "exterior_image_1_left": "exterior_image_1_left/video.mp4",
+    "exterior_image_2_left": "exterior_image_2_left/video.mp4",
+    "wrist_image_left": "wrist_image_left/video.mp4"
+  }
+}

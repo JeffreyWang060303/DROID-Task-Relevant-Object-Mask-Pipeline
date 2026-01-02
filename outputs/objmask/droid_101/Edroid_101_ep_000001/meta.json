@@ -6,17 +6,8 @@
     "the drawer"
   ],
   "cameras": {
-    "exterior_image_1_left": {
-      "original_video": "exterior_image_1_left/original.mp4",
-      "masked_video": "exterior_image_1_left/objmask.mp4"
-    },
-    "exterior_image_2_left": {
-      "original_video": "exterior_image_2_left/original.mp4",
-      "masked_video": "exterior_image_2_left/objmask.mp4"
-    },
-    "wrist_image_left": {
-      "original_video": "wrist_image_left/original.mp4",
-      "masked_video": "wrist_image_left/objmask.mp4"
-    }
+    "exterior_image_1_left": "exterior_image_1_left/video.mp4",
+    "exterior_image_2_left": "exterior_image_2_left/video.mp4",
+    "wrist_image_left": "wrist_image_left/video.mp4"
   }
 }

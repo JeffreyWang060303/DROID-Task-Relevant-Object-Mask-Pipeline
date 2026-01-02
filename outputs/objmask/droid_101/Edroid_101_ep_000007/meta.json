@@ -1,0 +1,14 @@
+{
+  "episode_id": "droid_101_ep_000007",
+  "instruction": "Pick up the white and green brush from the table and hang it on the wall",
+  "objects": [
+    "the white and green brush",
+    "the table",
+    "the wall"
+  ],
+  "cameras": {
+    "exterior_image_1_left": "exterior_image_1_left/video.mp4",
+    "exterior_image_2_left": "exterior_image_2_left/video.mp4",
+    "wrist_image_left": "wrist_image_left/video.mp4"
+  }
+}
