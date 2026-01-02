@@ -88,15 +88,12 @@ outputs/
 └── dataset_name/
     ├── E1/
     │   ├── exterior_image_1_left/
-    │   │   ├── original.mp4
-    │   │   └── masked.mp4
+    │   │   └─── video.mp4
     │   ├── exterior_image_2_left/
-    │   │   ├── original.mp4
-    │   │   └── masked.mp4
+    │   │   └─── video.mp4
     │   ├── wrist_image_left/
-    │   │   ├── original.mp4
-    │   │   └── masked.mp4
-    │   └── info.md
+    │   │   └─── video.mp4
+    │   └── meta.json
     ├── E2/
     ├── E3/
     ├── E4/
